@@ -3,12 +3,17 @@ const axios = require("axios");
 
 
 const apiKey = process.env.Merriam_API_Key
+let testWord = ''
+const apiLink = `https://dictionaryapi.com/api/v3/references/collegiate/json/${testWord}?key=${apiKey}`
 
-const testKey = '4d8e095b-3c6a-4bc5-86e7-c8c5c4a83b9f'
-const apiLink = `https://dictionaryapi.com/api/v3/references/collegiate/json/test?key=${apiKey}`
+function getWordValue () {
+  var wordValue=document.getElementById("wordInsert").value; 
+ console.log(wordValue)
+ defineWord(wordValue);
+}
 
-let movieSelector = () =>{
-    axios.get(apiLink)
+let defineWord = (insertedWord) =>{
+    axios.get(`https://dictionaryapi.com/api/v3/references/collegiate/json/${insertedWord}?key=${apiKey}`)
     .then(function (response) {
       // handle success
       console.log(response.data);
@@ -19,12 +24,9 @@ let movieSelector = () =>{
     })
   }
 
-movieSelector(); 
+defineWord("help")
 
-let getWordValue = () => {
-    var number=document.getElementById("wordInsert").value; 
-    console.log(number) 
-}
+
 
 
 
