@@ -8,28 +8,23 @@ const apiLink = `https://dictionaryapi.com/api/v3/references/collegiate/json/${t
 
 function getWordValue () {
    wordValue=document.getElementById("wordInsert").value;
-   console.log(wordValue)
-//  console.log(wordValue)
-// testWord.push(wordValue)
-// setTimeout(function() {
-  defineWord();
-// }, 1000); 
+  defineWord(); 
 }
  
 
 
 
-let defineWord = () =>{
+function defineWord () {
   console.log(wordValue)
-    // axios.get(`https://dictionaryapi.com/api/v3/references/collegiate/json/${testWord[0]}?key=${apiKey}`)
-    // .then(function (response) {
-    //   // handle success
-    //   console.log(response.data);
-    // })
-    // .catch(function (error) {
-    //   // handle error
-    //   console.log(error);
-    // })
+  //   axios.get(`https://dictionaryapi.com/api/v3/references/collegiate/json/${wordValue}?key=${apiKey}`)
+  //   .then(function (response) {
+  //     // handle success
+  //     console.log(response.data);
+  //   })
+  //   .catch(function (error) {
+  //     // handle error
+  //     console.log(error);
+  //   })
   }
 
 
