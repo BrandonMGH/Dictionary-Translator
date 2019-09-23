@@ -18,13 +18,13 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../Dictionary-Translator/app/index/index.html"));
-  });
+// app.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../Dictionary-Translator/app/index/index.html"));
+//   });
 
-app.get("/api", (req, res) => {
-  res.send("Welcome to the Star Wars Page!");
-})
+// app.get("/api", (req, res) => {
+//   res.send("Welcome to the Star Wars Page!");
+// })
 
 
 app.listen(PORT, () => {
