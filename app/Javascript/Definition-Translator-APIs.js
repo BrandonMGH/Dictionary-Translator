@@ -1,5 +1,3 @@
-var apiKey = require("../");
-console.log(apiKey)
 
 $("#wordSelect").on("click", function(event) {
 
@@ -10,7 +8,7 @@ $("#wordSelect").on("click", function(event) {
     var wordValue = $("#wordInsert").val();
 
 
-    var queryURL = `https://dictionaryapi.com/api/v3/references/collegiate/json/${wordValue}?key=${apiKey}`;
+    var queryURL = `https://dictionaryapi.com/api/v3/references/collegiate/json/${wordValue}?key=4d8e095b-3c6a-4bc5-86e7-c8c5c4a83b9f`;
 
  
 
@@ -18,6 +16,7 @@ $("#wordSelect").on("click", function(event) {
       url: queryURL,
       method: "GET"
     }).then(function(response) {
+      console.log(response)
       $("#test").text(JSON.stringify(response));
     });
 
