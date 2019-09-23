@@ -22,7 +22,34 @@
     <div id="test">
 
     </div>
-    <script type="text/javascript" src="/Javascript/Definition-Translator-APIs.js"></script>
+    <script type="text/javascript">
+    
+$("#wordSelect").on("click", function(event) {
+
+
+event.preventDefault();
+
+
+var wordValue = $("#wordInsert").val();
+
+
+var queryURL = `https://dictionaryapi.com/api/v3/references/collegiate/json/${wordValue}?key=4d8e095b-3c6a-4bc5-86e7-c8c5c4a83b9f`;
+
+
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function(response) {
+  console.log(response)
+  $("#test").text(JSON.stringify(response));
+});
+
+// -----------------------------------------------------------------------
+
+});
+
+    </script>
 </body>
 
 </html>
